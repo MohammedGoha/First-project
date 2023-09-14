@@ -1,0 +1,684 @@
+:root {
+    --main-color: #8b1310;
+    --hover-color: #fe9a0c;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* in small screen  */
+@media(min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* in medium screen  */
+@media(min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* in larges screens */
+@media(min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end glolble rules  */
+
+/* start header section  */
+header {
+    background-color: #8b1310;
+}
+
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    overflow: hidden;
+
+}
+
+header .container>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    color: white;
+}
+
+header .container>ul li {
+    display: flex;
+    gap: 5px;
+    color: white;
+}
+
+header .container>ul li a {
+    color: white;
+    transition: .3s;
+}
+
+header .container>ul li a:hover {
+    color: var(--hover-color);
+
+}
+
+@media(max-width:991px) {
+    header .container>ul {
+        display: none;
+    }
+
+    header .container {
+        padding: 10px
+    }
+}
+
+/* mega menu shit  */
+header .container .right ul {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #111;
+    width: 0;
+    align-content: center;
+    padding-top: 90px;
+    transition: .3s;
+}
+
+header .container .right ul li {
+    margin: 0 auto;
+    display: none;
+    transition: .3s;
+}
+
+header .container .right ul li a {
+    color: white;
+    text-transform: capitalize;
+    transition: .3s;
+    font-size: 25px;
+}
+
+header .container .right ul li a:hover {
+    color: var(--hover-color);
+}
+
+header .container .right img:hover+ul {
+    width: 150px;
+}
+
+header .container .right img:hover+ul li {
+    display: block;
+}
+
+header .container .right ul:hover {
+    width: 150px;
+}
+
+header .container .right ul:hover li {
+    display: block;
+}
+
+@media(min-width:992px) {
+    header .container .right img:hover+ul {
+        width: 300px;
+    }
+
+    header .container .right ul:hover {
+        width: 300px;
+    }
+}
+
+header .container .right ul>a {
+    position: absolute;
+    right: 30px;
+    color: white;
+    top: 30px;
+    transition: .3s;
+}
+
+header .container .right ul:hover>a {
+    z-index: 1;
+}
+
+header .container .right ul>a:hover {
+    color: var(--hover-color);
+}
+
+header .container .right ul>a {
+    z-index: -1;
+}
+
+/* end header section  */
+/* #fffffff0 */
+/* start landing section  */
+.landing {
+    padding: 70px 0;
+    background-image: url(../images/banner1.jpg);
+    height: 100vh;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.landing .container {
+    overflow: hidden;
+    text-align: center;
+
+
+}
+
+.landing .container .boxs {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.landing .container .boxs .box {
+    min-width: 100%;
+    text-align: center;
+    background-color: #fffffff0;
+
+    padding: 30px;
+}
+
+.landing .container .boxs .box h1 {
+    font-size: 50px;
+}
+
+.landing .container .boxs .box h1 span {
+    color: var(--hover-color);
+
+
+}
+
+.landing .container .boxs .box p {
+    line-height: 1.6;
+    color: #2d2d2d;
+
+
+}
+
+.landing button {
+
+    background-color: white;
+    color: #2d2d2d;
+    border: 0;
+    transition: .3s;
+    padding: 10px 15px;
+    width: 150px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.landing button:hover {
+    background-color: var(--hover-color);
+}
+
+@media(max-width:768px) {
+    .landing button {
+        top: 80%;
+    }
+
+    .landing .container .boxs .box h1 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:992px) {
+    header .container .boxs .box h1 {
+        font-size: 40px;
+    }
+}
+
+/* end landing section  */
+.about .container {
+    position: relative;
+}
+
+.about .container .box {
+    display: flex;
+    gap: 30px;
+    margin-top: 100px;
+    box-shadow: 4px 0 27px rgba(02, 3, 8, .2);
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* .about .container .box::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    ;
+} */
+.about {
+    padding: 60px 0;
+}
+
+.about .container .box .right img {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+}
+
+@media(max-width:1199px) {
+    .about .container .box .right img {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media(max-width:991px) {
+    .about .container .box {
+        flex-direction: column;
+    }
+
+    .about .container .box .right img {
+        transform: translate(0%, 0%);
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+}
+
+
+.about .container .left {
+    padding: 40px 10px;
+    flex-basis: 40%;
+}
+
+.about .container .right {
+    flex-basis: 60%;
+    position: relative;
+
+}
+
+.about .container .box {
+    padding: 50px 10px;
+}
+
+.about .container .box h2 {
+    margin-bottom: 30px;
+}
+
+.about .container .box .left button:hover {
+    background-color: var(--hover-color);
+}
+
+.about .container .box p {
+    line-height: 2;
+    color: #2d2d2d;
+}
+
+.about .container .box button {
+    margin-top: 30px;
+    transition: .3s;
+    border: 0;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*start  after .about section the text and small one */
+.txt {
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.txt .container {
+    padding: 100px 15px;
+}
+
+.txt .container h1 {
+    color: white;
+}
+
+.txt .container h1 span {
+    color: var(--hover-color);
+    display: block;
+}
+
+.txt .container p {
+    color: white;
+    line-height: 30px;
+    margin-top: 40px;
+}
+
+@media(max-width:992px) {
+    .txt {
+        background-color: var(--main-color);
+        padding: 0;
+        background-image: none;
+    }
+}
+
+.compo {
+    margin-bottom: 40px;
+}
+
+/*end after .about section the text and small one  */
+.sevices {
+    padding: 70px 0;
+    background-image: url(../images/service_bg.jpg);
+    padding-bottom: 350px;
+}
+
+.sevices .container .box ul {
+    display: flex;
+}
+
+.sevices .container .box ul li {
+    padding: 5px 15px;
+    background-color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sevices .container .box ul li:hover,
+.sevices .container .box ul li.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.sevices .container .box .imgs .the img {
+    max-width: 100%;
+    width: 330px;
+}
+
+.sevices .container .box .imgs {
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.sevices .container .box .imgs .theimg:first-child {
+
+    display: flex;
+}
+
+.sevices .container .box .imgs .theimg:first-child .the:last-child {
+    transform: translate(-30px, 125px);
+}
+
+.sevices .container .box .imgs .theimg:last-child .the:first-child {
+    transform: translate(-55px, 10px);
+}
+
+.sevices .container button {
+    transition: .3s;
+    border: 0;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.sevices .container button:hover {
+    background-color: var(--hover-color);
+}
+
+/* end sevices section  */
+/* start instant sectin  */
+
+.instant {
+    background-color: #fd990c;
+    padding: 50px 0;
+    position: relative;
+}
+
+.instant::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: -350px;
+    left: 0;
+    height: 350px;
+    background-image: url(../images/cr00s1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.instant::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: -348px;
+    left: 0;
+    height: 350px;
+    background-image: url(../images/cr00s.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.instant .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instant .container .text h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.instant .container .text p {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.instant .container button {
+    transition: .3s;
+    border: 0;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.instant .container button:hover {
+    background-color: white;
+    color: var(--hover-color);
+}
+
+.instant .container .text {
+    flex-basis: 70%;
+}
+
+@media(max-width:991px) {
+    .instant .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+/* end instant sectin  */
+/* start footer section  */
+footer {
+    padding-top: 350px;
+    padding-bottom: 50px;
+    background-color: #540705;
+}
+
+footer .container .boxs {
+    display: flex;
+    gap: 40px;
+}
+
+footer .container .icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #814948;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+footer .container .icons a {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+footer .container .icons a i {
+    color: var(--main-color);
+    font-size: 30px;
+    transition: .5s;
+
+}
+
+footer .container .icons a:hover {
+    background-color: var(--hover-color);
+}
+
+footer .container .icons a:hover i {
+    rotate: 360deg;
+}
+
+footer .container .boxs .box {
+    color: white;
+}
+
+footer .container .boxs .box img {
+    margin-bottom: 40px;
+}
+
+footer .container .boxs .box p {
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+footer .container .boxs .box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+footer .container .boxs .box ul li {
+    position: relative;
+}
+
+footer .container .boxs .box ul a {
+    color: white;
+    position: absolute;
+    padding-bottom: 15px;
+    left: 0;
+    transition: .3s;
+}
+
+footer .container .boxs .box ul a:hover {
+    color: var(--hover-color);
+    left: 10px;
+}
+
+footer .container .boxs .box ul a i {
+    margin-right: 10px;
+    background-color: transparent;
+
+}
+
+footer .container .boxs .box .imag {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .container .boxs .box h1 {
+    width: 200px;
+}
+
+footer .container .boxs .box .imag img {
+    margin: 0;
+}
+
+@media(max-width:991px) {
+    footer .container .boxs {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+        gap: 100px;
+    }
+}
+
+@media(max-width:768px) {
+    footer .container .boxs {
+        gap: 30px;
+        padding-left: 20px;
+
+    }
+}
+
+footer .container .copy {
+    color: white;
+    padding-top: 30px;
+    border-top: 2px solid #814948;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+/* end footer section  */
