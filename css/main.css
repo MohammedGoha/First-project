@@ -56,7 +56,10 @@ ul {
     width: 1170px;
   }
 }
-
+button{ 
+  user-select: none;
+  cursor: pointer;
+}
 /* end glolble rules  */
 
 /* start header section  */
