@@ -145,21 +145,21 @@ header .container .right ul li a:hover {
     color: var(--hover-color);
 }
 
-header .container .right img:hover+ul {
+header .container .right img.show+ul {
     width: 150px;
 }
 
-header .container .right img:hover+ul li {
+header .container .right img.show+ul li {
     display: block;
 }
 
-header .container .right ul:hover {
+/* header .container .right ul:hover {
     width: 150px;
 }
 
 header .container .right ul:hover li {
     display: block;
-}
+} */
 
 @media(min-width:992px) {
     header .container .right img:hover+ul {
@@ -171,23 +171,24 @@ header .container .right ul:hover li {
     }
 }
 
-header .container .right ul>a {
+header .container .right ul>span {
     position: absolute;
     right: 30px;
     color: white;
     top: 30px;
     transition: .3s;
+    cursor:pointer;
 }
 
-header .container .right ul:hover>a {
+header .container .right ul:hover>span {
     z-index: 1;
 }
 
-header .container .right ul>a:hover {
+header .container .right ul>span:hover {
     color: var(--hover-color);
 }
 
-header .container .right ul>a {
+header .container .right ul>span {
     z-index: -1;
 }
 
